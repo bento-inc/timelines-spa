@@ -6,9 +6,9 @@
 
 - Docker and Docker Compose (Docker Desktop comes with both binaries)
 
-**developing with a containerized env:**
+**developing witha containerized env:**
 
-`package.json`, `package(-lock).json` are mounted so that your local LSP will can discover code from `node_modules`, and so that we can add packages from within a containerized env.
+`package.json`, `package(-lock).json` are mounted so that your local LSP can discover code from `node_modules`, and so that we can add packages from within a containerized env.
 ```bash
 # e.g. start with npm ci to get node_modules on host
 docker compose run --rm frontend npm ci
