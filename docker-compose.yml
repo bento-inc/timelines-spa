@@ -1,0 +1,17 @@
+services:
+  frontend:
+    build:
+      context: .
+    command: npm run dev-docker
+    ports:
+      - 5173:5173
+    develop:
+      watch:
+        - action: sync
+          path: ./src/
+          target: /app/src/
+          initial_sync: true
+          ignore:
+            - node_modules
+        - action: rebuild
+          path: ./package.json
