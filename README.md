@@ -1,12 +1,14 @@
 # timelines-spa
 
+Create timelines of life events, or your favorite moments in history.
+
 ## Local Development
 
 **requirements:**
 
 - Docker and Docker Compose (Docker Desktop comes with both binaries)
 
-**developing witha containerized env:**
+**developing with a containerized env:**
 
 `package.json`, `package(-lock).json` are mounted so that your local LSP can discover code from `node_modules`, and so that we can add packages from within a containerized env.
 ```bash
