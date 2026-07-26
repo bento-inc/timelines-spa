@@ -26,3 +26,10 @@ services:
             - dist/
             - .git/
             - .env
+  firebase:
+    build:
+      context: .
+      dockerfile: ./docker/firebase/Dockerfile
+    ports: ["9099:9099", "4000:4000"]
+    volumes:
+      - ./docker/firebase/data:/firebase/data

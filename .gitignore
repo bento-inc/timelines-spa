@@ -12,6 +12,9 @@ dist
 dist-ssr
 *.local
 
+# Firebase emulator exported data
+docker/firebase/data
+
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json
