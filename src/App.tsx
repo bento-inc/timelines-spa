@@ -1,3 +1,4 @@
+import { BrowserRouter, Route, Routes } from "react-router";
 import "./App.css";
 import FirebaseService from "./services/firebase/service.ts";
 import {
@@ -10,15 +11,20 @@ const firebaseService = FirebaseService;
 function App() {
     return (
         <>
-            <FirebaseUIProvider ui={firebaseService.getUI()}>
-                <h1>Hello world</h1>
+            <BrowserRouter>
+                <Routes>
+                    <Route path="/" />
+                </Routes>
+                <FirebaseUIProvider ui={firebaseService.getUI()}>
+                    <h1>Hello world</h1>
 
-                <EmailLinkAuthScreen
-                    onSignIn={(credential) => {
-                        console.log("Signed in:", credential.email);
-                    }}
-                ></EmailLinkAuthScreen>
-            </FirebaseUIProvider>
+                    <EmailLinkAuthScreen
+                        onSignIn={(credential) => {
+                            console.log("Signed in:", credential.email);
+                        }}
+                    ></EmailLinkAuthScreen>
+                </FirebaseUIProvider>
+            </BrowserRouter>
         </>
     );
 }
