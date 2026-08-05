@@ -11,6 +11,8 @@ services:
       - ./package.json:/app/package.json
       - ./package-lock.json:/app/package-lock.json
       - ./node_modules:/app/node_modules
+    env_file:
+      - ./.env
     develop:
       watch:
         - action: rebuild
@@ -26,3 +28,10 @@ services:
             - dist/
             - .git/
             - .env
+  firebase:
+    build:
+      context: .
+      dockerfile: ./docker/firebase/Dockerfile
+    ports: ["9099:9099", "4000:4000"]
+    volumes:
+      - ./docker/firebase/data:/firebase/data

@@ -11,9 +11,13 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@firebase-oss/ui-react": "^7.0.3",
+    "@firebase-oss/ui-styles": "^7.0.3",
     "@tailwindcss/vite": "^4.3.3",
+    "firebase": "^12.16.0",
     "react": "^19.2.7",
     "react-dom": "^19.2.7",
+    "react-router": "^8.3.0",
     "tailwindcss": "^4.3.3"
   },
   "devDependencies": {
